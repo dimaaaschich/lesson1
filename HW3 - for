@@ -14,3 +14,29 @@ def count_avr(phone_sales):
 for model in sales:
     model_sales_avg = count_avr(model['items_sold'])
     print(f'средняя продажа телефонов {model['product']}: {model_sales_avg}')
+
+
+sales = [
+    {'product': 'iPhone 12', 'items_sold': [363, 500, 224, 358, 480, 476, 470, 216, 270, 388, 312, 186]}, 
+    {'product': 'Xiaomi Mi11', 'items_sold': [317, 267, 290, 431, 211, 354, 276, 526, 141, 453, 510, 316]},
+    {'product': 'Samsung Galaxy 21', 'items_sold': [343, 390, 238, 437, 214, 494, 441, 518, 212, 288, 272, 247]},
+  ]
+a = sum(sales[0]['items_sold'])
+b = sum(sales[1]['items_sold'])
+c = sum(sales[2]['items_sold'])
+avr_a = a / len(sales[0]['items_sold'])
+avr_b = b / len(sales[1]['items_sold'])
+avr_c = c / len(sales[2]['items_sold'])
+
+print(avr_a, avr_b, avr_c)
+
+print(a + b + c)
+
+
+f = 0
+aver = 0
+for n in sales:
+    f += sum(n['items_sold'])
+    aver += 1
+aver_all = int(f / aver)
+print(f, aver_all)
