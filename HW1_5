@@ -1,0 +1,8 @@
+my_dict = {"Как дела": "Хорошо!", "Что делаешь?": "Программирую", 'Можно выйти?': 'Хуй там!'}
+
+def ask_user(ask):
+    while ask in my_dict:
+        print(my_dict.get(ask))
+        break
+
+ask_user('Можно выйти?')
